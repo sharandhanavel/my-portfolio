@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Raleway&family=Lato&family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1">
-    <title>Sharan's Portfolio</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Raleway&family=Lato&family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- Link to your individual stylesheets -->
+        <!-- <link rel="stylesheet" href="styles/global.css?v=1">
+        <link rel="stylesheet" href="styles/nav.css?v=1">
+        <link rel="stylesheet" href="styles/hero.css?v=1">
+        <link rel="stylesheet" href="styles/about.css?v=1">
+        <link rel="stylesheet" href="styles/projects.css?v=1">
+        <link rel="stylesheet" href="styles/resume.css?v=1">
+        <link rel="stylesheet" href="styles/contact.css?v=1">
+        <link rel="stylesheet" href="styles/footer.css?v=1"> -->
+
+        <link rel = "stylesheet" href="style.css">
+        <title>Sharan's Portfolio</title>
+    </head>
+    
 <body>
     <nav>
         <div class="navbar-container">
-            <ul>
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                &#9776;
+            </div>
+            <ul id="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <label class="switch">
+            <label class="switch" aria-label="Toggle theme">
                 <input type="checkbox" id="theme-toggle">
                 <span class="slider round"></span>
             </label>
         </div>
-    </nav>
-    <header>
+    </nav>    
+    <header id="home">
         <div class="hero">
             <div class="hero-content">
                 <h1>Hi, I'm Sharan</h1>
@@ -39,7 +54,7 @@
             <h2>About Me</h2>
             <p class="about-intro">A quick glimpse into who I am and what I love to do!</p>
             <div class="about-content">
-                <img src="images/my_profile.jpg" alt="Profile" class="about-profile-image">
+                <img src="images/my_profile.jpg" alt="Profile of Sharan" class="about-profile-image">
                 <div class="about-text">
                     <p>Entry-level software developer with expertise in Java, Spring Boot, and database management, experienced in building web applications with RESTful APIs and implementing CRUD operations. Skilled in utilizing frameworks such as Spring MVC, JPA, and Hibernate for efficient back-end development.</p>
                     <a href="#contact" class="connect-button">Connect with Me</a>
@@ -51,18 +66,18 @@
             <p class="projects-intro">Here's a glimpse of what I've built. Feel free to explore!</p>
             <div class="project-list">
                 <div class="project-card">
-                    <img src="images/Todo_Tumbnail.png" alt="Project 1" class="project-image">
+                    <img src="images/Todo_Tumbnail.png" alt="Screenshot of Todo Application" class="project-image">
                     <div class="project-content">
-                        <h3>Todo Applicaion</h3>
+                        <h3>Todo Application</h3>
                         <p>A Todo app for users to manage tasks through CRUD operations with feedback notifications for interaction.<br><b>Tech Stack:</b><br>
                             <i>Languages: Java, JSP<br>
                             Frameworks: Spring Boot<br>
                             Database: MySQL (using JPA)</i></p>
-                        <a href="https://github.com/sharandhanavel/ToDoApplication" target="_blank" class="project-button">View Project</a>
+                        <a href="https://github.com/sharandhanavel/ToDoApplication" target="_blank" class="project-button" aria-label="View Todo Application project">View Project</a>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/BlogApp_Tumbnail.png" alt="Project 2" class="project-image">
+                    <img src="images/BlogApp_Tumbnail.png" alt="Screenshot of Blog Application" class="project-image">
                     <div class="project-content">
                         <h3>Blog Application</h3>
                         <p>A RESTful backend service for managing blog posts and comments, allowing users to execute CRUD operations.<br><b>Tech Stack:</b><br>
@@ -70,40 +85,43 @@
                             Frameworks: Spring Boot<br>
                             Architecture: RESTful API<br>
                             Database: JPA for data persistence</i></p>
-                        <a href="https://github.com/sharandhanavel/BlogApplication" target="_blank" class="project-button">View Project</a>
+                        <a href="https://github.com/sharandhanavel/BlogApplication" target="_blank" class="project-button" aria-label="View Blog Application project">View Project</a>
                     </div>
                 </div>
             </div>
         </section>
         <section id="resume">
             <h2>My Resume</h2>
-            <p class="resume-invite">Curious about my journey and skills? <span class="highlight">Download my resume!</span></p>
-            <a href="assets/SHARAN_D_RESUME.pdf" target="_blank" class="download-resume" download="Sharan_Resume.pdf">Download Resume</a>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="contact-options">
-                <a href="mailto:sharandhanavel@gmail.com" class="contact-icon" title="Email">
-                    <i class="fas fa-envelope"></i>
+            <div class="resume-content">
+                <p class="resume-invite">Curious about my journey and skills? <span class="highlight">Download my resume!</span></p>
+                <a href="assets/SHARAN_D_RESUME.pdf" target="_blank" class="download-resume" download="Sharan_Resume.pdf" aria-label="Download Sharan's resume">
+                    <i class="fas fa-file-download"></i> Download Resume
                 </a>
-                <a href="https://www.linkedin.com/in/sharandhanavel/" target="_blank" class="contact-icon" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/sharandhanavel" target="_blank" class="contact-icon" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://leetcode.com/u/sharandhanavel/" target="_blank" class="contact-icon" title="LeetCode">
-                    <i class="fas fa-code"></i>
-                </a>
-                <!--<a href="#hire-me" class="hire-me-button">Hire Me</a>-->
             </div>
-        </section>
+        </section>              
+        <section id="contact">
+            <div class="contact-content">
+                <h2>Contact Me</h2>
+                <div class="contact-options">
+                    <a href="mailto:sharandhanavel@gmail.com" class="contact-icon" title="Email" aria-label="Email Sharan">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sharandhanavel/" target="_blank" class="contact-icon" title="LinkedIn" aria-label="Sharan's LinkedIn profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/sharandhanavel" target="_blank" class="contact-icon" title="GitHub" aria-label="Sharan's GitHub profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/sharandhanavel/" target="_blank" class="contact-icon" title="LeetCode" aria-label="Sharan's LeetCode profile">
+                        <i class="fas fa-code"></i>
+                    </a>
+                </div>
+            </div>
+        </section>        
     </main>
     <footer>
         <p>&copy; 2024 Sharan</p>
         <div>
-            <!--<a href="https://www.linkedin.com/in/sharandhanavel/><i class="fab fa-linkedin"></i> LinkedIn</a> |
-            <a href="https://github.com/sharandhanavel"><i class="fab fa-github"></i> GitHub</a>-->
             "Focus on being productive instead of busy"
         </div>
     </footer>
