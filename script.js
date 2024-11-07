@@ -31,3 +31,11 @@ toggleSwitch.addEventListener('change', () => {
         localStorage.setItem('theme', 'light');
     }
 });
+
+// JavaScript to toggle the navigation menu
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active'); // Toggle the 'active' class
+});
