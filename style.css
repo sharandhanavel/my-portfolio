@@ -209,7 +209,7 @@ header {
     padding: 10px 20px;
     font-size: 1em;
     color: white;
-    background-color: #003975;
+    background-color: #0056b3;
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -219,7 +219,7 @@ header {
 }
 
 .hero-button:hover {
-    background-color: #0056b3;
+    background-color: #003975;
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
