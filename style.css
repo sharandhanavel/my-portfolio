@@ -88,7 +88,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 nav a {
@@ -171,8 +171,8 @@ body.dark-mode .hamburger {
 header {
     font-family: 'Lato', sans-serif;
     position: relative;
-    height: 100vh;
-    background-image: url('images/Hero_Sec.jpg');
+    height: 50vh;
+    background-image: url('images/Hero_bg.jpg');
     background-size: cover;
     background-position: center;
     color: #ffffff;
@@ -195,7 +195,7 @@ header {
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -219,7 +219,7 @@ header {
 }
 
 .hero-button:hover {
-    background-color: #3cc94e;
+    background-color: #0056b3;
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -264,7 +264,7 @@ body.dark-mode #about {
     font-size: 1.5em;
     color: #333;
     margin: 10px 0;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Lato', sans-serif;
 }
 
 body.dark-mode .about-intro {
@@ -290,7 +290,7 @@ body.dark-mode .about-intro {
 }
 
 .about-profile-image:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -316,16 +316,15 @@ body.dark-mode .about-text p {
     margin-top: 15px;
     padding: 12px 25px;
     color: white;
-    background-color: #007BFF; /* Updated button color */
+    background-color: #007BFF;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Cedarville Cursive', cursive;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .connect-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
     transform: scale(1.05);
 }
 
@@ -359,7 +358,7 @@ body.dark-mode .about-text p {
 #projects {
     text-align: center;
     padding: 30px 20px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #000;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -371,78 +370,63 @@ body.dark-mode #projects {
 
 .projects-intro {
     font-size: 1.5em;
-    color: #00ffff;
+    color: #05adad;
     margin: 15px 0;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Lato', sans-serif;
 }
 
-/* Flex container for project cards */
+/* Grid container for project items */
 .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 60px;
+    justify-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Project Item Styles */
+.project-item {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-}
-
-/* Project Card Styles */
-#projects {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #f9f9f9;
-    color: #000;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode #projects {
-    background-color: #1a1a1a;
-    color: #fff;
-}
-
-.projects-intro {
-    font-size: 1.5em;
-    color: #00ffff;
-    margin: 15px 0;
-    font-family: 'Cedarville Cursive', cursive;
-}
-
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project-card {
-    width: 300px;
+    background-color: #ffffff;
     border-radius: 8px;
-    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
-body.dark-mode .project-card {
+body.dark-mode .project-item {
     background-color: #2b2b2b;
 }
 
-.project-card:hover {
+.project-item:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .project-image {
     width: 100%;
-    border-radius: 8px 8px 0 0; /* Optional: for rounded top corners */
+    max-width: 400px; /* Set max width for consistency */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .project-content {
-    padding: 20px;
-    text-align: left;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .project-content h3 {
     color: #333;
     margin-bottom: 10px;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
 }
 
 body.dark-mode .project-content h3 {
@@ -464,7 +448,7 @@ body.dark-mode .project-content p {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
-    background-color: #007BFF; /* Updated button color */
+    background-color: #007BFF;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
@@ -472,25 +456,28 @@ body.dark-mode .project-content p {
 }
 
 .project-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
     transform: scale(1.05);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
-    .project-card {
-        width: 45%;
+    .project-list {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust column size on medium screens */
     }
 }
 
 @media (max-width: 768px) {
-    .project-card {
-        width: 100%;
-        margin-bottom: 20px;
+    .project-list {
+        grid-template-columns: 1fr;
     }
 
     .projects-intro {
         font-size: 1.3em;
+    }
+
+    .project-content h3 {
+        font-size: 1.1em;
     }
 }
 
@@ -500,13 +487,14 @@ body.dark-mode .project-content p {
     }
 
     .project-content h3 {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .project-content p {
         font-size: 0.85em;
     }
 }
+
 /* Resume Section */
 #resume {
     background-color: #f9f9f9;
@@ -524,11 +512,7 @@ body.dark-mode #resume {
 .resume-invite {
     font-size: 1.2em;
     margin: 15px 0;
-    font-family: 'Cedarville Cursive', cursive;
-}
-
-.resume-invite .highlight {
-    color: #ff3d00;
+    font-family: 'Lato', sans-serif;
 }
 
 .download-resume {
@@ -613,7 +597,7 @@ body.dark-mode #contact {
 
 .contact-icon:hover {
     color: #3cc94e;
-    transform: scale(1);
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
