@@ -378,7 +378,7 @@ body.dark-mode #projects {
 /* Grid container for project items */
 .project-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 60px;
     justify-items: center;
     padding: 20px;
