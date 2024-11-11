@@ -1,0 +1,69 @@
+/* Resume Section */
+#resume {
+    background-color: #f9f9f9;
+    color: #000;
+    text-align: center;
+    padding: 30px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #resume {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.resume-invite {
+    font-size: 1.2em;
+    margin: 15px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.download-resume {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1em;
+    color: white;
+    background-color: #007BFF; /* Updated button color */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+.download-resume:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+body.dark-mode .download-resume {
+    background-color: #007BFF; /* Consistent color for dark mode */
+}
+
+body.dark-mode .download-resume:hover {
+    background-color: #0056b3; /* Consistent color for dark mode */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .download-resume {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .resume-invite {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-invite {
+        font-size: 0.9em;
+    }
+
+    .download-resume {
+        font-size: 0.8em;
+        padding: 8px 16px;
+    }
+}
